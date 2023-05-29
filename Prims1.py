@@ -50,7 +50,11 @@ def prims(graph):
                 mst.append((e.src, e.dest, e.wt))
             heapq.heappush(pq, (e.wt, e.dest))
     print(mstCost)
-    print(mst)
+    printMST(mst)
+
+def printMST(mst):
+    for e in mst:
+        print(f"Edge: {e[0]}->{e[1]} Weight:{e[2]}")
 
 g= createGraph(5)
 prims(g)

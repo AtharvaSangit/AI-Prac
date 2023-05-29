@@ -56,11 +56,13 @@ def kruskals(g):
             mstCost += g[count].wt
             mst.append((g[count].src, g[count].dest, g[count].wt))
         count=count+1
-    print(mst)
+    printMST(mst)
     print(mstCost)
 
+def printMST(mst):
+    for e in mst:
+        print(f"Edge: {e[0]}->{e[1]} Weight:{e[2]}")
 
 n=5
 g = createGraph()
-
 kruskals(g)
