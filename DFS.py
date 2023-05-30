@@ -45,7 +45,23 @@ def dfsSimple(g,vis, curr):
             continue
         dfsSimple(g,vis,e.dest)
 
+#--------Code for Coonected components--------------
+def dfs(g,vis):
+    for i in range(len(g)):
+        if vis[i]:
+            continue
+        dfsUtil(g, vis, i)
+
+def dfsUtil(g,vis, curr):
+    print(curr)
+    vis[curr] = True
+    for e in g[curr]:
+        if vis[e.dest]:
+            continue
+        dfsSimple(g,vis,e.dest)
+#----------------------------------------------
 
 g = createGraph(7)
 vis = [False]*len(g)
-dfsSimple(g,vis,0)
+# dfsSimple(g,vis,0)
+dfs(g, vis)
