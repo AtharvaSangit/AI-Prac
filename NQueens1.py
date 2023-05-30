@@ -59,3 +59,13 @@ print(nq.count)
 nq2 = NQueens(6) 
 nq2.NQueensSol(0)
 print(nq2.count)
+'''
+Time Complexity -  O(N!)
+
+For the first row, we check N columns; for the second row, we check the N - 1 column and so on. Hence, the time complexity will be N * (N-1) * (N-2) …. i.e. O(N!)
+
+Space Complexity - O(N^2)
+
+O(N^2), where ‘N’ is the number of queens. 
+We are using a 2-D array of size N rows and N columns, and also, because of recursion, the recursive stack will have a linear space here. So, the overall space complexity will be O(N^2).
+'''
