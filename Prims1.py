@@ -59,5 +59,6 @@ def printMST(mst):
 g= createGraph(5)
 prims(g)
 
-     
+#TC - O((E+V)logV)
+#SC - O(E+V)
           

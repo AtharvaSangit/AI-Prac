@@ -66,3 +66,5 @@ def printMST(mst):
 n=5
 g = createGraph()
 kruskals(g)
+#TC - O(ElogE + ElogV)
+#SC - O(|E| + |V|)
